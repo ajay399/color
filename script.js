@@ -16,21 +16,13 @@ const myFunction=()=>{
 }
 
 const CopyCode=(text)=>{
-
-  var copyText=text;
-  //var newElement = document.createElement('input');
- // document.body.appendChild(newElement);
-
- var newElement=document.getElementById("copyfield");
- newElement.setAttribute('style', 'display:block;');
-  newElement.value = copyText;
-  newElement.select();
-  newElement.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  setTimeout(function() {
-    
-        newElement.setAttribute('style', 'display:none;');
-    }, 50);
+  var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = text.trim();
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
 }
 
 
