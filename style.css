@@ -299,21 +299,15 @@ footer
 		
 		.box
 		{
-			
-			
-			
 			color:white;
 			cursor:pointer;
 			display: flex;
 			font-size: 18px;
 			font-family: monospace;
 			flex-wrap: wrap;
-			
+			transition: all 0.5s;
 			justify-content: center;
 			align-items: center;
-
-
-			
 			 
 		}
 
